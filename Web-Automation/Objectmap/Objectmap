@@ -1,0 +1,23 @@
+#login GUI elements
+loginusername=id@username
+loginpassword=name@pwd
+loginbutton=xpath@//div[text()='Login ']
+
+
+#minimize
+homepageflyoutwindow=id@gettingStartedShortcutsPanelId
+
+#create user page
+userpageusers=xpath@//div[text()='USERS']
+userpageadduser=xpath@//div[text()='Add User']
+userpagefirstname=id@userDataLightBox_firstNameField
+userpagelastname=id@userDataLightBox_lastNameField
+userpagemail=id@userDataLightBox_emailField
+userpageadmin=id@userDataLightBox_usernameField
+userpagepassword=name@password
+userpageretypepwd=name@passwordCopy
+userpagecreateuser=id@userDataLightBox_commitBtn
+#delete user
+#deleteuserselect=xpath@//*[@id="topnav"]/tbody/tr[1]/td[5]/a
+deleteuserlist=xpath@//span[text()='Gowda, Vedav']
+deleteuser1=id@userDataLightBox_deleteBtn
