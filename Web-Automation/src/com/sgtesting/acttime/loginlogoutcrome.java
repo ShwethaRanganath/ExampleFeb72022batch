@@ -13,6 +13,7 @@ public class loginlogoutcrome {
 		navigate();
 		login();
 		minimizeFlyOutWindow();
+		createUser();
 	    logout();
 		closeApplication();
 	}
@@ -60,6 +61,32 @@ public class loginlogoutcrome {
 			oBrowser.findElement(By.id("gettingStartedShortcutsPanelId")).click();
 			Thread.sleep(2000);
 		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	private static void createUser()
+	{
+		try
+		{
+			oBrowser.findElement(By.xpath("//*[@id=\"topnav\"]/tbody/tr[1]/td[5]/a")).click();
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//div[text()='Add User']")).click();
+			Thread.sleep(2000);
+			oBrowser.findElement(By.name("firstName")).sendKeys("Shwetha");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.name("lastName")).sendKeys("Gowda");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.name("email")).sendKeys("abc@gmail.com");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.name("username")).sendKeys("testing");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.name("password")).sendKeys("qwe123");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.name("passwordCopy")).sendKeys("qwe123");
+			Thread.sleep(4000);
+			oBrowser.findElement(By.xpath("//span[text()='Create User']")).click();
+		}catch(Exception e) 
 		{
 			e.printStackTrace();
 		}
